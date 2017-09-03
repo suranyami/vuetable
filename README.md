@@ -1,6 +1,6 @@
-# vuetable
+# VueTable
 
-Sortable, paginateable, filterable table implemented in Vue.js
+> Sortable, paginateable, filterable table implemented in Vue.js
 
 ## Build Setup
 
