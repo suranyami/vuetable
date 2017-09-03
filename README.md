@@ -1,6 +1,6 @@
 # vuetable
 
-> Vue Datatable component
+Sortable, paginateable, filterable table implemented in Vue.js
 
 ## Build Setup
 
