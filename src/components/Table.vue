@@ -1,21 +1,5 @@
-<template>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="item in items">
-        <td>{{item.name}}</td>
-        <td class="number">{{item.price}}</td>
-        <td class="number">{{item.quantity}}</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
+<template lang="pug">
+  b-table(striped bordered hover :items="items" :fields="fields")
 </template>
 
 <script>
@@ -23,6 +7,23 @@ export default {
   name: 'table',
   data () {
     return {
+      fields: {
+        name: {
+          class: 'text',
+          label: 'Name',
+          sortable: true
+        },
+        price: {
+          class: 'number',
+          label: 'Price',
+          sortable: true
+        },
+        quantity: {
+          class: 'number',
+          label: 'Quantity',
+          sortable: true
+        }
+      },
       items: [
         {
           name: 'Widget',
@@ -46,8 +47,16 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-td.number {
-  text-align: right;
+<style lang="scss">
+td, th {
+  &.text {
+    text-align: left;
+  }
+
+
+  &.number {
+    text-align: right;
+  }
 }
+
 </style>
